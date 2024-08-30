@@ -8,7 +8,7 @@ let bankBranchInstance = null;
 
 class BankBranch {
     constructor(branchInfo) {
-     if (bankBranchInstance.instance === null){
+     if (bankBranchInstance === null){
         this.branchInfo = branchInfo;
         bankBranchInstance = this;
      }  return bankBranchInstance;
@@ -19,6 +19,12 @@ getBranchInfo(){
  return this.branchInfo;
 }
 }
+
+const branchA = new BankBranch ();
+const branchB = new BankBranch();
+branchA.getBranchInfo();
+branchB.getBranchInfo();
+console.log(branchA === branchB);
 
 
 // 3. In the `BankBranch` class:
