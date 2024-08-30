@@ -6,7 +6,20 @@ let bankBranchInstance = null;
 
 // 2. Define a class called `BankBranch` for managing branch information.
 
-class BankBranch {}
+class BankBranch {
+    constructor(branchInfo) {
+     if (bankBranchInstance.instance === null){
+        this.branchInfo = branchInfo;
+        bankBranchInstance = this;
+     }  return bankBranchInstance;
+    }
+
+    //method
+getBranchInfo(){
+ return this.branchInfo;
+}
+}
+
 
 // 3. In the `BankBranch` class:
 //    - Create a constructor that takes `branchInfo` as a parameter.
